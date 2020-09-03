@@ -619,6 +619,22 @@ config YL_CHARGE_MODE
 	help
 	  Say Y to enable Yulong charge mode.
 
+config OPPO_CHARGER
+	tristate "Summit Microelectronics OPPO Battery Charger"
+	depends on I2C
+	select REGMAP_I2C
+	help
+	  Say Y to include support for Summit Microelectronics BQ24196
+	  Battery Charger.
+
+config BQ24196_CHARGER
+	tristate "Summit Microelectronics BQ24196 Battery Charger"
+	depends on I2C
+	select REGMAP_I2C
+	help
+	  Say Y to include support for Summit Microelectronics BQ24196
+	  Battery Charger.
+
 source "drivers/power/reset/Kconfig"
 
 endif # POWER_SUPPLY

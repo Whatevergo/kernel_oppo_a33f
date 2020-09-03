@@ -93,6 +93,7 @@ else ifeq ($(CONFIG_MACH_YULONG_MSM8939),y)
 dtb-$(CONFIG_ARCH_MSM8916) += msm8939-cp8675-i01-p0.dtb
 else
 dtb-$(CONFIG_ARCH_MSM8916) += msm8916-cdp.dtb \
+	msm8916-mtp-15035.dtb \
 	msm8916-cdp-smb1360.dtb \
 	msm8916-mtp.dtb \
 	msm8916-mtp-smb1360.dtb \
