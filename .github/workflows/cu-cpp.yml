@@ -1,0 +1,39 @@
+name: C/C++ CI
+
+on:
+
+  push:
+
+    branches: [ Ten ]
+
+  pull_request:
+
+    branches: [ Ten ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v2
+
+    - name: configure
+
+      run: make lineage_a33f_defconfig
+
+    - name: push
+
+      run: export ARCH=arm64
+
+           export SUBARCH=arm64
+
+    - name: mkdir
+
+      run: mkdir -p out
+
+    - name: make
+
+      run: make O=out
